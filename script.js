@@ -32,6 +32,13 @@ function toggleMode() {
     // Update button color
     modeToggleButton.className = isWorkTime ? 'work-mode' : 'break-mode';
     
+    // Add emoji animation
+    const emojiContainer = document.querySelector('.mode-emoji');
+    emojiContainer.textContent = '🎉';
+    emojiContainer.classList.remove('animate');
+    void emojiContainer.offsetWidth; // Trigger reflow
+    emojiContainer.classList.add('animate');
+    
     updateDisplay();
 }
 

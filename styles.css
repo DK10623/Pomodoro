@@ -130,3 +130,19 @@ h1 {
         width: 100%;
     }
 } 
+
+@keyframes popIn {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.mode-emoji {
+    font-size: 2rem;
+    height: 2rem;
+    margin-top: 1rem;
+}
+
+.mode-emoji.animate {
+    animation: popIn 0.5s ease-out;
+} 

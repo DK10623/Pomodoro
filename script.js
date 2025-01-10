@@ -90,11 +90,9 @@ function addFiveMinutes() {
     updateDisplay();
 }
 
+// Event Listeners
 startButton.addEventListener('click', startTimer);
 pauseButton.addEventListener('click', pauseTimer);
-resetButton.addEventListener('click', resetTimer); 
-
+resetButton.addEventListener('click', resetTimer);
 modeToggleButton.addEventListener('click', toggleMode);
-modeToggleButton.className = 'work-mode'; // Set initial state 
-
-addFiveButton.addEventListener('click', addFiveMinutes); 
+addFiveButton.addEventListener('click', addFiveMinutes);

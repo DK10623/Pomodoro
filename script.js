@@ -11,6 +11,7 @@ const modeText = document.getElementById('mode-text');
 const workModeButton = document.getElementById('work-mode');
 const restModeButton = document.getElementById('rest-mode');
 const modeToggleButton = document.getElementById('mode-toggle');
+const addFiveButton = document.getElementById('add-five');
 
 modeToggleButton.classList.add('work-mode');
 
@@ -81,9 +82,19 @@ function setWorkMode() {
     updateDisplay();
 }
 
+function addFiveMinutes() {
+    if (timeLeft === undefined) {
+        timeLeft = isWorkTime ? 30 * 60 : 5 * 60;
+    }
+    timeLeft += 5 * 60; // Add 5 minutes (300 seconds)
+    updateDisplay();
+}
+
 startButton.addEventListener('click', startTimer);
 pauseButton.addEventListener('click', pauseTimer);
 resetButton.addEventListener('click', resetTimer); 
 
 modeToggleButton.addEventListener('click', toggleMode);
 modeToggleButton.className = 'work-mode'; // Set initial state 
+
+addFiveButton.addEventListener('click', addFiveMinutes); 
